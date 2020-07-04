@@ -27,9 +27,12 @@
       // list of results, not an array
       // we'll need to convert it into an array 
       // Array.from is ES6
-      console.log(e.results);
+    //   console.log(e.results);
       const transcript = Array.from(e.results)
         .map(results => result[0])
+        .map(results => result.transcript)
+        // join all strings together
+        .join('')
 
       console.log(transcript);
 
