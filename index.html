@@ -10,7 +10,14 @@
   </div>
 
 <script>
+// speech recognition in the browser
+// straight in the browser
+// global variable that lives in the browser
   window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+
+  const recognition = new SpeechRecognition();
+  // as you're speaking, it needs to populate AS you speak
+  recognition.interimResults = true;
 
 
 </script>
