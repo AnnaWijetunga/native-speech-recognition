@@ -33,6 +33,13 @@
         .map(results => result.transcript)
         // join all strings together
         .join('')
+        // prevent overwriting of text
+        p.textContent = transcript;
+        
+        if(e.result[0].isFinal) {
+            p = document.createElement('p');
+            words.appendChild(p);
+        }
 
       console.log(transcript);
   });
