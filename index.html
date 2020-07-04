@@ -35,9 +35,10 @@
         .join('')
 
       console.log(transcript);
-
-
   });
+
+  // listens for when I'm finished, after a break, and it will start listening once again
+  recognition.addEventListener('end', recognition.start);
 
   // don't run on page load, but prompt user
   recognition.start();
